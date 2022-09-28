@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class PaymentController {
 
-    @Autowired
+    @Resource
     private PaymentService paymentService;
 
     @Value("${server.port}")

@@ -11,22 +11,21 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface PaymentDao {
     /**
-     * @Title: insert
-     * @Description: add
-     * @Param: payment
-     * @return: int返回类型
-     * @Author: wxz
-     * @Date: 2022/9/15 15:00
+     * add
+     * @author wxz
+     * @date 16:07 2022/9/28
+     * @param payment
+     * @return int
      */
     public int insert(Payment payment);
 
+
     /**
-     * @Title: getPaymentById
-     * @Description: select
-     * @Param: id
-     * @return: Payment返回类型
-     * @Author: wxz
-     * @Date: 2022/9/15 15:00
+     * select
+     * @author wxz
+     * @date 16:06 2022/9/28
+     * @param id
+     * @return com.atguigu.springcloud.entities.Payment
      */
     public Payment getPaymentById(@Param("id") Long id);
 }

@@ -27,6 +27,7 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-paymentZipkin8007" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-config-center-3355" />
         <module name="cloudalibaba-provider-payment9002" />
         <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-gateway-gateway9527" />
