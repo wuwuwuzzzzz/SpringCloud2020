@@ -10,6 +10,8 @@
         <module name="cloud-eureka-server7001" />
         <module name="cloud-providerpayment8004" />
         <module name="cloud-eureka-server7002" />
+        <module name="seata-order-service2001" />
+        <module name="cloudalibaba-consumer-nacos-order84" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-consumerzk-order80" />
@@ -28,6 +30,8 @@
         <module name="cloud-provider-paymentZipkin8007" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-config-center-3355" />
+        <module name="cloudalibaba-provider-payment9004" />
+        <module name="cloudalibaba-provider-payment9003" />
         <module name="cloudalibaba-provider-payment9002" />
         <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-gateway-gateway9527" />

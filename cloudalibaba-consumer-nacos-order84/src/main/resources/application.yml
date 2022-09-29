@@ -1,9 +1,9 @@
 server:
-  port: 8401
+  port: 84
 
 spring:
   application:
-    name: cloudalibaba-sentinel-service
+    name: nacos-order-consumer
   datasource:
     # 当前数据源操作类型
     type: com.alibaba.druid.pool.DruidDataSource
@@ -16,21 +16,29 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    loadbalancer:
+      nacos:
+        enabled: true
     sentinel:
       transport:
         dashboard: 127.0.0.1:8080
         port: 8719
-      datasource:
-        ds1:
-          nacos:
-            server-addr: localhost:8848
-            data-id: cloudalibaba-sentinel-service
-            group-id: DEFAULT_GROUP
-            data-type: json
-            rule-type: flow
+      ribbon:
+        enable: false
+
+#消费者将要去访问的微服务者名称
+service-url:
+  nacos-user-service: http://nacos-payment-provider
 
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        incloud: '*'
+
+feign:
+  sentinel:
+    enabled: true
+
+
+
