@@ -1,9 +1,9 @@
 server:
-  port: 2001
+  port: 2002
 
 spring:
   application:
-    name: seata-order-service
+    name: seata-storage-service
   cloud:
     alibaba:
     nacos:
@@ -12,7 +12,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
-      url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+      url: jdbc:mysql://localhost:3306/seata_storage?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
       username: root
       password: 123456
 

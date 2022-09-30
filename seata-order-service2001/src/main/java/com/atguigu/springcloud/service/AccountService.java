@@ -22,6 +22,6 @@ public interface AccountService {
      * @param money
      * @return com.atguigu.springcloud.entities.CommonResult
      */
-    @PostMapping("/account/dectease")
+    @PostMapping("/account/decrease")
     CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }

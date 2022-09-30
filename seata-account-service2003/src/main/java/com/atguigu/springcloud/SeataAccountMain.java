@@ -7,15 +7,14 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- *
  * @author wxz
- * @date 16:20 2022/9/29
+ * @date 14:06 2022/9/30
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableFeignClients
 @EnableDiscoveryClient
-public class SeataOrderMain {
+public class SeataAccountMain {
     public static void main(String[] args) {
-        SpringApplication.run(SeataOrderMain.class, args);
+        SpringApplication.run(SeataAccountMain.class, args);
     }
 }

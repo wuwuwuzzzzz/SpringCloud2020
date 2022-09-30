@@ -20,6 +20,6 @@ public interface StorageService {
      * @param count
      * @return com.atguigu.springcloud.entities.CommonResult
      */
-    @PostMapping("/storage/dectease")
+    @PostMapping("/storage/decrease")
     CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
 }

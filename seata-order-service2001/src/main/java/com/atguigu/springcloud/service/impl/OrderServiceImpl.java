@@ -5,6 +5,7 @@ import com.atguigu.springcloud.domain.Order;
 import com.atguigu.springcloud.service.AccountService;
 import com.atguigu.springcloud.service.OrderService;
 import com.atguigu.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,7 @@ public class OrderServiceImpl implements OrderService {
      * @date 17:18 2022/9/29
      * @param order
      */
+    @GlobalTransactional(name = "order-create", rollbackFor = Exception.class)
     @Override
     public void create(Order order) {
 
@@ -46,7 +48,12 @@ public class OrderServiceImpl implements OrderService {
         log.info("----------------账户开始扣钱-money----------");
         accountService.decrease(order.getUserId(), order.getMoney());
         log.info("----------------账户扣钱end-----------");
-        // TODO: 2022/9/29
+
+        log.info("------修改订单状态开始-----");
+        orderDao.update(order.getUserId(), 0);
+        log.info("------修改订单结束---------");
+
+        log.info("结束啦！");
     }
 
     /**
